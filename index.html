@@ -1,33 +1,35 @@
  <!DOCTYPE html>
 <html>
 <head>
+
+<title>Visudo</title> 
+ 
 <style>
-
-body, html {
-  height: 100%;
-}
-
-body {
-  background-image: url("public.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
+ body, html {
+   height: 100%;
+ }
+ 
+ body {
+   background-image: url("public.jpg");
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   overflow: hidden;
+ }
 </style>
 
 <script>
-fetch('//healthcheck.visudo.org').then(res => res.json()).then(function(data){
- if(data.status == 'ok'){
-   document.body.style.backgroundImage = "url('private.jpg')"; 
- } 
- else { 
-   console.log("Not connected to private network")
-  }
-})  
+ fetch('//healthcheck.visudo.org').then(res => res.json()).then(function(data){
+  if(data.status == 'ok'){
+    document.body.style.backgroundImage = "url('private.jpg')"; 
+  } 
+  else { 
+    console.log("Not connected to private network")
+   }
+ })  
 </script>
+
 </head>
 <body>
 
